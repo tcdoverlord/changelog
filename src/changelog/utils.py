@@ -1,0 +1,9 @@
+"""Small utility helpers."""
+
+from pathlib import Path
+
+
+def ensure_directory(path: str) -> Path:
+    p = Path(path)
+    p.mkdir(parents=True, exist_ok=True)
+    return p
